@@ -3,7 +3,7 @@
 
 class Tango < Formula
     homepage "http://confluence.tango.corp/pages/viewpage.action?pageId=5716692"
-    url "https://github.tango.me/mfilkov/tango-test-scripts.git"
+    url "https://github.tango.me/mfilkov/tango-test-scripts/archive/1.0.0.tar.gz"
     version "1.0.0"
 
     depends_on 'ffmpeg'
