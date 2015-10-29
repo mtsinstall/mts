@@ -4,7 +4,7 @@
 class Tango < Formula
     homepage "http://confluence.tango.corp/pages/viewpage.action?pageId=5716692"
     url "https://github.tango.me/mfilkov/tango-test-scripts.git"
-    version "1.0.0"
+    version "1.1.0"
 
     depends_on 'ffmpeg'
     depends_on 'tiff2png'
