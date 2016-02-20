@@ -22,6 +22,7 @@ class Mtu < Formula
         bin.install 'mtu'
         (share/"mtu/action").install Dir["action/*"]
         (share/"mtu/framework").install Dir["framework/*"]
+        (share/"mtu/framework").install Dir["requirements.txt"]
     end
 
     def post_install
@@ -61,7 +62,7 @@ class Mtu < Formula
 
     def self.install_py_packages()
         Mtu.show_colorized("Installing Python packages", "green")
-        `pip install -r #{File.dirname(__FILE__) + "/requirements.txt"}`
+        `pip install -r "/usr/local/share/mtu/framework/requirements.txt"`
         if $?.exitstatus != 0
             exit(1)
         end
