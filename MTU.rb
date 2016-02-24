@@ -1,6 +1,9 @@
 # This is installation script for Tango test scripts.
 # Confluence page: http://confluence.tango.corp/display/QA/Mobile+Test+Utils
 
+`chown -R $USER /usr/local`
+`chown -R $USER /Library/Python/2.7`
+
 class Mtu < Formula
     homepage "http://confluence.tango.corp/pages/viewpage.action?pageId=5716692"
     url "https://github.tango.me/mfilkov/mtu.git"
@@ -22,11 +25,10 @@ class Mtu < Formula
         bin.install 'mtu'
         (share/"mtu/action").install Dir["action/*"]
         (share/"mtu/framework").install Dir["framework/*"]
-        (share/"mtu/framework").install Dir["requirements.txt"]
+        (share/"mtu/framework").install Dir["install/requirements.txt"]
     end
 
     def post_install
-        Mtu.set_android_home
         Mtu.install_android_sdk_platform_tools
         Mtu.install_py_packages
         Mtu.activate_python_argcomplete
