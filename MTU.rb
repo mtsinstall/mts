@@ -55,8 +55,7 @@ class Mtu < Formula
     end
 
     def self.activate_python_argcomplete
-        `ln -sf /usr/local/etc/bash_completion.d /etc/bash_completion.d`
-        `/usr/local/bin/activate-global-python-argcomplete`
+        `/usr/local/bin/activate-global-python-argcomplete --dest=/usr/local/etc/bash_completion.d`
     end
 
     def self.install_py_packages()
