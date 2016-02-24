@@ -1,9 +1,6 @@
 # This is installation script for Tango test scripts.
 # Confluence page: http://confluence.tango.corp/display/QA/Mobile+Test+Utils
 
-`sudo chown -R $USER /usr/local`
-`sudo chown -R $USER /Library/Python/2.7`
-
 class Mtu < Formula
     homepage "http://confluence.tango.corp/pages/viewpage.action?pageId=5716692"
     url "https://github.tango.me/mfilkov/mtu.git"
