@@ -46,10 +46,6 @@ class Mtu < Formula
     end
 
     def self.install_android_sdk_platform_tools
-        `ls -la /usr/local/Cellar/android-sdk/*/platform-tools &> /dev/null`
-        if $?.exitstatus == 0
-            return
-        end
         Mtu.show_colorized("Installing Android SDK platform-tools...", "green")
         `echo "y" | android update sdk --no-ui --filter 'platform-tools'`
     end
